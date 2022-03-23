@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/8f172d8a26.js" crossorigin="anonymous"></script>
+    <link rel=icon href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/svgs/solid/check-double.svg>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./animation.css" />
+</head>
+
+<body>
+    <div class="left-container">
+        <h1>To Do List</h1>
+        <div class="items" data-items></div>
+        <div class="item-form" data-item-form>
+            <form>
+                <div class="grid">
+                    <input id="name" type="text" placeholder="Name" data-item-input required />
+                    <input type="submit" value="Add"></input>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <footer>@ <a href="https://github.com/lucastkacz/todo-list">lucastkacz</a> 2022</footer>
+            <i class="fa-brands fa-github"></i>
+        </div>
+    </div>
+    <div class="right-container" data-task-container>
+        <h2 data-item-name></h2>
+        <div class="tasks" data-tasks>
+            <div class="task"></div>
+        </div>
+        <div class="task-form" data-task-form>
+            <form onsubmit="">
+                <div class="grid">
+                    <input id="name" type="text" placeholder="Task" data-task-input required />
+                    <input id="date" type="date" placeholder="Select Date" data-task-date-input required />
+                    <input type="submit" value="Add"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+    <template id="item-template">
+        <div class="item" data-item-id>
+            <div data-item-text></div>
+            <div class="delete-button" data-item-delete>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </template>
+    <template id="show-all-item-template">
+        <div class="show-all-item item" data-show-all>
+            <div data-item-text>
+                Show All
+            </div>
+        </div>
+    </template>
+    <template id="task-template">
+        <div class="task" data-task-id>
+            <div class="left-task-side">
+                <input type="checkbox" data-task-checkbox />
+                <div data-task-text></div>
+            </div>
+            <div class="right-task-side">
+                <p class="date" data-task-date></p>
+                <div class="delete-button" data-task-delete>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>

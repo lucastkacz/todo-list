@@ -1,0 +1,21 @@
+.item:hover {
+	background-color: rgba(16, 149, 193, 0.2);
+}
+
+.show-all-item:hover {
+	background-color: rgba(16, 149, 193, 0.5);
+}
+
+.task:hover {
+	background-color: aliceblue;
+}
+
+.task.checked:hover {
+	background-color: rgb(185, 223, 255);
+}
+
+.delete-button:hover {
+	color: crimson;
+	cursor: pointer;
+}
+

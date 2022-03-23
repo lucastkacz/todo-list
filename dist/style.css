@@ -1,0 +1,106 @@
+:root {
+	--left-container-width: 20vw;
+	--right-container-width: 80vw;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+}
+
+/* ------------------------- LEFT CONTAINER STYLES ------------------------- */
+
+.left-container {
+	background-color: rgb(226, 226, 226);
+	display: flex;
+	flex-direction: column;
+	width: var(--left-container-width);
+	align-items: center;
+    border-right: 1px solid black;
+}
+
+.item {
+	width: var(--left-container-width);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1vw;
+}
+
+.active-item {
+    background-color: rgba(16, 149, 193, 0.2);
+}
+
+.show-all-item {
+	color: black;
+	justify-content: center;
+	font-weight: 900;
+}
+
+.item-form {
+	padding: 1vw;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: var(--left-container-width);
+	padding: 10px;
+	font-size: 20px;
+}
+
+/* ------------------------- RIGHT CONTAINER STYLES ------------------------- */
+
+h2 {
+	margin-top: 3vh;
+}
+
+.right-container {
+	display: flex;
+	flex-direction: column;
+	width: var(--right-container-width);
+	align-items: center;
+}
+
+.task {
+	width: var(--right-container-width);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1vw;
+    border-bottom: 1px solid black;
+}
+
+.right-task-side {
+	display: flex;
+	align-items: center;
+	/* width: 25vw; */
+	gap: 1.5vw;
+}
+
+.left-task-side {
+	display: flex;
+	align-items: center;
+	gap: 1vw;
+}
+
+.date {
+	width: 20vw;
+	height: auto;
+	margin: 0;
+}
+
+.task-form {
+	width: var(--right-container-width);
+	padding: 1vw;
+}
+
+.checked {
+    text-decoration: line-through;
+    background-color: rgb(246, 246, 246);
+}
